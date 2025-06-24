@@ -1,0 +1,342 @@
+.status-box {
+  border: 1px solid black;
+}
+
+.screenshot-square {
+  border: 1px solid black;
+  height: 300px;
+  margin: 0 20% 0 11%;
+}
+
+.defect-image {
+  width: 100% !important;
+  height: 296px;
+}
+
+
+
+.ticketLink{
+  cursor: pointer;
+  color: grey;
+}
+
+.summary {
+  overflow: hidden;
+  min-height: 100px;
+  border-color: #ced4da;
+}
+
+.nav-fonts-color{
+  font-size: large;
+}
+
+.editbutton {
+  margin-left: -20% !important;
+}
+
+// .modal-header{
+//   margin-left: 13% !important;
+// }
+.sum {
+  border: 1px solid black;
+  min-height: 120px;
+  margin-left: 1%;
+  margin-right: 5%;
+}
+
+.defectname {
+  border: 1px solid black;
+  margin-left: 2.5%;
+  min-height: 30px;
+}
+
+.expected {
+  border: 1px solid black;
+  min-height: 30px;
+}
+
+.actual {
+  border: 1px solid black;
+  min-height: 30px;
+}
+
+.defecttype {
+  border: 1px solid black;
+  min-height: 30px;
+}
+
+.Priority {
+  border: 1px solid black;
+  min-height: 30px;
+  margin-left: 5.4%;
+}
+
+.defect-image {
+  border: 1px solid black;
+  min-height: 50px;
+  display: block;
+}
+
+.defect-card-heihgt {
+  height: "36rem";
+  width: "30rem";
+
+  @media only screen and (height: 1440px) {
+    flex-direction: column;
+  }
+}
+
+.defect-card-width {
+  height: "36rem";
+  width: "45rem";
+
+  @media only screen and (max-width: 843px) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.border-bottom {
+  border-bottom: 0 !important;
+}
+
+.Modal-Heading {
+  margin-left: 26%;
+}
+
+.Modal-Headings {
+  margin-left: 20%;
+}
+
+.text-response {
+  text-align: center;
+
+  @media only screen {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.login-container-size {
+  height: "36rem";
+  width: "45rem";
+
+  @media only screen and (max-width: 695px) {
+    margin-top: 30%;
+    align-self: center;
+  }
+}
+
+.login-container-width {
+  height: "36rem";
+  width: "45rem";
+
+  @media only screen and (max-width: 695px) {
+    margin: 2%;
+  }
+}
+
+.login-text-style {
+  height: "36rem";
+  width: "45rem";
+
+  @media only screen and (max-width: 695px) {
+    margin: 5%;
+  }
+}
+
+.login-text-space {
+  height: "36rem";
+  width: "45rem";
+
+  @media only screen and (max-width: 695px) {
+    margin: 10%;
+  }
+}
+
+.login-buttom-space {
+  height: "36rem";
+  width: "45rem";
+
+  @media only screen and (max-width: 695px) {
+    margin-bottom: 10%;
+    align-self: center;
+  }
+}
+
+// .create-user-text {
+//   height: "36rem";
+//   width: "45rem";
+//   margin-left: 34%;
+//   border-bottom: 0;
+//   @media (min-width: 320px) and (max-width: 580px) {
+//     margin-left: 21%;
+//   }
+// }
+.form-header {
+  color: #009bdf !important;
+}
+
+.modal-div {
+  // width: 100% !important;
+  display: flex !important;
+}
+
+.create-user-firstname {
+  height: "36rem";
+  width: "45rem";
+
+  @media (min-width: 320px) and (max-width: 580px) {
+    margin: 2%;
+  }
+}
+
+// .create-user-card {
+//   height: "36rem";
+//   width: "45rem";
+
+//   @media (min-width: 320px) and (max-width: 580px) {
+//     padding-top: 3%;
+//     padding-right: 5%;
+//     padding-bottom: 1%;
+//   }
+// }
+
+.create-user-padding {
+  height: "36rem";
+  width: "45rem";
+
+  @media (min-width: 320px) and (max-width: 580px) {
+    padding: 2%;
+  }
+}
+
+.defect-list {
+  text-align: center;
+
+  @media only screen {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.defect-portal {
+  text-align: center;
+  font-size: "mb-5";
+
+  @media (min-width: 320px) and (max-width: 580px) {
+    font-size: medium !important;
+  }
+
+  @media (min-width: 320px) and (max-width: 580px) {
+    margin-top: 2%;
+  }
+}
+
+.defect-portal-form {
+  margin: 5%;
+}
+
+.image-width {
+  @media (min-width: 320px) and (max-width: 580px) {
+    width: 143%;
+  }
+}
+
+.alignRight {
+  @media (min-width: 320px) and (max-width: 768px) {
+    text-align: right;
+  }
+}
+
+.create-status-modal {
+  height: "36rem";
+  width: "45rem";
+
+  @media (min-width: 320px) and (max-width: 623px) {
+    width: 90%;
+    margin-top: 55%;
+    margin-left: 2%;
+    align-items: center;
+  }
+}
+
+.hide {
+  box-shadow: none !important;
+}
+
+// .create-priority-modal {
+//   height: "36rem";
+//   width: "45rem";
+
+//   @media (min-width: 320px) and (max-width: 623px) {
+//     width: 90%;
+//     margin-top: 55%;
+//     margin-left: 2%;
+//     align-items: center;
+//   }
+// }
+
+.button-end {
+  margin-left: 48%;
+}
+
+.hedar-line {
+  position: "initial";
+}
+
+.employeealignCenter {
+  @media (min-width: 320px) and (max-width: 1440px) {
+    text-align: center;
+  }
+}
+
+.employeealignRight {
+  @media (min-width: 320px) and (max-width: 768px) {
+    text-align: right;
+  }
+}
+.attachments-tabs{
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  border: 1px solid grey;
+}
+
+.nav-pills .nav-link {
+  font-weight: bold;
+}
+
+// .history-tab {
+//   border-left: 1px solid gray;
+// }
+
+// .attachment-tab {
+//   border-right: 1px solid gray;
+// }
+
+// .nav-pills .nav-link:active {
+//   background: #14539a !important;
+//   color: aliceblue;
+// }
+// .nav-pills .nav-link::after {
+//   background: #14539a !important;
+//   color: aliceblue;
+// }
+.nav-pills .nav-link.active {
+  background: #14539a !important;
+}
+// .nav-pills .nav-link.active,
+// .nav-pills .show > .nav-link {
+//   background-color: #14539a;
+// }
+container-res-bg-image {
+  height: "36rem";
+  width: "45rem";
+
+@media only screen and (max-width: 320px) {
+  
+      background-repeat: no-repeat;
+      background-size: 288px 444px;
+      background-position: 19% 47%;
+  }
+}

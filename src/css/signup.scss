@@ -1,0 +1,212 @@
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    }
+    @import '~react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+    .card-div{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        margin-top: 20px;
+    }
+    .main-card{
+        background-color: white;
+        height: auto;
+        width: 40%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+    }
+    .col-one{
+        margin: auto;
+        width: 60%;
+        margin-top: 80px;
+    }
+    .col-two{
+        margin: auto;
+        width: 60%;
+        margin-top: 20px;
+    }
+    .button-col{
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+    .button-style{
+        width: 60%;
+        height: 40px;
+        background-color: #0084a8 !important;
+        border: #0084a8 !important;
+    }
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        background-color:#f7f7f7 ;
+        height: 50px;
+      }
+      .link-div{
+          margin: 7px;
+          text-decoration: none;
+          background-color: unset !important;
+          margin-bottom: 30px !important;
+      }
+      .image-style{
+          width: 90px;
+          margin-left: 10px;
+      }
+      .add-button{
+          margin-top: 8%;
+           display: flex;
+      }
+      .modal-col{
+        margin: auto;
+        width: 60%;
+        margin-top: 20px;
+    }
+    .Admin-forum {
+        background-color: unset !important;
+        border-color: transparent !important;
+        border: unset !important;
+        box-shadow: unset !important;
+      }
+      .dropdown-toggle::after {
+          visibility: hidden;
+      }
+      .Admin-forum-list {
+        background-color: unset !important;
+      }
+      .hr-tag{
+          margin: 0%;
+          height: 0.5px !important;
+      }
+      .col-one-signup{
+        display: flex;
+        justify-content:space-between ;
+        margin: auto;
+        width: 60%;
+        margin-top: 20px;
+      }
+      .col-one-signup-edit{
+        display: flex;
+        justify-content:center ;
+        margin: auto;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .description {
+        border: 1px solid #ced4da;
+        padding: 2px;
+        min-height: 100px;
+        border-radius: 0.25rem !important;
+      }
+      .main-card-div{
+        border-radius: 10px;
+        margin: auto;
+        width: 70%;
+        height: auto;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+    }
+    
+    .main-page{
+        margin-top: 7%;
+    }
+    .button-style-signup{
+        background-color:red !important;
+        border: #0084a8 ;
+    }
+    .ddd{
+        background-color: green !important;
+    }
+    // .button-style-signup{
+    //     width: 40%;
+    //     height: 40px;
+    //     background-color: #0084a8!important;
+    //     border: #0084a8 !important;
+    //     margin-bottom: 30px;
+    // }
+    .avatar-div{
+        margin-top: 7%;
+        display: flex;
+        justify-content: center;
+    }
+    .icon-div:hover{
+        cursor: pointer;
+    }
+    .atten-div{
+        margin-top: 8%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .css-9gakcf-option {
+        background-color: unset !important;
+    }
+    .create-div{
+        display: flex;
+        justify-content: center;  
+    }
+    .navbar-dashboard-style{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .navbar-dashboard-style:hover{
+        cursor: pointer;
+    }
+    .profile-card{
+        display: flex;
+        margin: auto;
+        width: 60%;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+        height: auto;   
+    }
+    .profile-sec-div{
+        display: flex;
+        justify-content: center;
+    }
+    .profile-main{
+        margin-top: 10%;
+    }
+    .profile-col-one{
+    display: flex;
+    justify-content: center;
+    }
+    .avatar-div-profile{
+        margin-top: 18%;
+        margin-right: 10%;
+    }
+    .profile-col-two{
+        display: flex;
+        align-items: center;
+        margin-top: 8%;
+    }
+    
+    .start-time-style {
+        width: 100%;
+        border: 1px solid #dadfe3 !important;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 4px;
+        height: 40px;
+        cursor: default;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px 7px 10px !important;
+      }
+      .modal-show{
+         display: flex;
+         margin-top: 10%;
+         height: auto;
+         width: auto;
+      }
+      .button-two-div{
+          display: flex;
+          justify-content: flex-end;
+      }
+       .font-edit :hover{
+           cursor: pointer;
+       }

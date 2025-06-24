@@ -1,0 +1,96 @@
+.sidebar {
+  background-color: #c9e4eb;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 78px;
+  padding: 0px 14px 6px 14px;
+  position: fixed;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1000;
+  transition: all ease 300ms;
+}
+
+.active {
+    width: 260px;
+    background-color: #c9e4eb;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 0px 14px 6px 14px;
+    z-index: 1;
+    position: fixed;
+    z-index: 1000;
+  }
+.logo-content {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  color: #fff;
+  left: 0;
+  width: 260px;
+  z-index: 1 !important;
+  background-color: #f8f9fa;
+}
+.sidebar .menu-button {
+    color: black;
+    left: 36%;
+    position: absolute;
+    font-size: 20px;
+    height: 25px;
+    width: 30px;
+    text-align: right;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: 49% !important;
+    margin-top: 9%;
+  }
+
+.sidebar .logo-content.logo {
+  opacity: 1;
+  pointer-events: none;
+  color: #fff;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  align-items: center;
+}
+
+
+.sidebar .nav-list  {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    list-style: none;
+    margin-top: 30%;
+  }
+  .menu-list1{
+    background-color: #fff;
+    color: black;
+  }
+  .main-nav-active {
+    color: white !important;
+    text-decoration: none;
+    background-color: #5f9ea0;
+  }
+  
+  .sidebar .nav-list .menu-list .main-nav-active:hover {
+    color: black !important;
+  }
+  
+  .sidebar .nav-list .menu-list .main-nav-active:hover span {
+    color: black !important;
+    background-color: unset;
+  }
+  
+  .sidebar .nav-list .menu-list .main-nav-active .menu-icon {
+    color: white !important;
+  }
+  
+  .sidebar .nav-list .menu-list .main-nav-active .menu-icon:hover {
+    color: black !important;
+  }
+  .sidebar.active .nav-list .menu-list .main-nav-active:hover .menu-icon {
+    color: black !important;
+  }
