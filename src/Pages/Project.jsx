@@ -220,13 +220,15 @@ function Project() {
             )}
           </div>
 
-        
+
+          
 
           <MaterialTable
             title="Projects"
             icons={tableIcons}
             columns={columns} //original
             data={data}
+
             // columns={tableRole==="projects"?projectData:projectData}
             // data={tableRole==="projects"?projectData.filter((x)=>x.role=="projectuser"):projectData}
 
@@ -353,9 +355,9 @@ function Project() {
                   code: edittValues?.code,
                   defaultAssignee: edittValues?.defaultAssignee
                     ? {
-                        label: edittValues?.defaultAssignee,
-                        value: edittValues?.defaultAssignee,
-                      }
+                      label: edittValues?.defaultAssignee,
+                      value: edittValues?.defaultAssignee,
+                    }
                     : "",
                   lastIncremented: edittValues?.lastIncremented,
                 }}
@@ -437,9 +439,9 @@ function Project() {
                                   ?.map((list) =>
                                     list?.role === "Lead"
                                       ? {
-                                          label: `${list?.name} (${list?.role})`,
-                                          value: list?.id,
-                                        }
+                                        label: `${list?.name} (${list?.role})`,
+                                        value: list?.id,
+                                      }
                                       : ""
                                   ),
                               },

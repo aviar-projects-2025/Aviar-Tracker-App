@@ -15,6 +15,7 @@ function Header() {
   const lastName = localStorage.getItem("lastName");
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const [closeDrop, setCloseDrop] = useState(false)
   const handleClose = () => setShow(false);
   const role = localStorage.getItem("role");
   const confirmLogout = () => {
@@ -26,34 +27,28 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg" className="mx-auto">
       <Container fluid className="mx-4">
-        <Navbar.Brand href="#home">
+        <Link to={"/admin/dashboard"}>
           <img alt="" src={Aviar} width="200" height="65" className="d-inline-block align-top" />
-        </Navbar.Brand>
-
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
         <Navbar.Collapse className="">
           {role === "admin" ? (
-            <Nav className="me">
-              <Nav.Link href="/admin/dashboard" className="text-body adminalignRight menu-text nav-font-color">
+            <div className="navbarAdmin" style={{
+
+            }}>
+              <Link to={"/admin/dashboard"} className="nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                 Users
-              </Nav.Link>
-              <Nav.Link href="/project/list" className="text-body adminalignRight menu-text nav-font-color">
+              </Link>
+              <Link to={"/project/list"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                 Projects
-              </Nav.Link>
-              {/* <Nav.Link href="/products" className="text-body adminalignRight menu-text nav-font-color">
-              Products
-            </Nav.Link> */}
-              <Nav.Link href="/project/defects" className="text-body adminalignRight menu-text nav-font-color">
+              </Link>
+              <Link to={"/project/defects"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                 Defects
-              </Nav.Link>
-              <Nav.Link
-                href="/project/statuses"
-                className="text-body adminalignRight menu-text nav-font-color project-status"
-              >
+              </Link>
+              <Link to={"/project/statuses"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                 Project Status
-              </Nav.Link>
-            </Nav>
+              </Link>
+            </div>
           ) : (
             ""
           )}
@@ -61,26 +56,28 @@ function Header() {
             <NavDropdown
               className="drop adminalignRight"
               align="end"
-              title={<Avatar name={`${firstName} ${lastName}`} size="50" color="silver" round={true} />}
+              title={<Avatar name={`${firstName} ${lastName}`} size="40" color="silver" round={true}  onClick={()=>{setCloseDrop(true)}}/>}
               id="basic-nav-dropdown"
+              show={closeDrop}
             >
-              <NavDropdown.Item
-                href="/edit/screen"
-                height="10"
-                width="45"
-                className="navbar-dropdown edit-profile nav-font-color menu-text"
-              >
-                Edit Profile{" "}
-              </NavDropdown.Item>
-              <hr />
-              <NavDropdown.Item
-                onClick={() => {
-                  setShow(true);
-                }}
-                className="navbar-dropdown nav-font-color edit-profile menu-text "
-              >
-                Logout
-              </NavDropdown.Item>
+              <div className="logoutModal">
+                <Link
+                  to={"/edit/screen"}
+                  className="text-decoration-none w-100  text-center hoverclr p-2"
+                  onClick={()=>{setCloseDrop(false)}}
+                >
+                  Edit Profile{" "}
+                </Link>
+                <Link
+                  className="text-decoration-none  w-100  text-center hoverclr p-2"
+                  onClick={() => {
+                    setShow(true);
+                    setCloseDrop(false)
+                  }}
+                >
+                  Logout
+                </Link>
+              </div>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

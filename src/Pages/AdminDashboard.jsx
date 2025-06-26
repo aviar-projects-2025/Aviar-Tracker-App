@@ -69,8 +69,8 @@ function Dashboard() {
           onClick={() =>
             rowData.role === "employee"
               ? navigate("/employee/attendance/admin", {
-                  state: { data: rowData },
-                })
+                state: { data: rowData },
+              })
               : null
           }
         >
@@ -217,7 +217,7 @@ function Dashboard() {
     const role = localStorage.getItem("role");
     userList();
     getAllData();
-     window.onpopstate = function (event) {
+    window.onpopstate = function (event) {
       navigate(null);
       event.preventDefault();
       setLogutShow(true);
@@ -283,10 +283,10 @@ function Dashboard() {
       </Row> */}
 
           <div className="mt-3">
-            <div className="d-flex justify-content-center md-between mx-0 mb-3 ">
+            <div className="d-flex justify-content-center md-between mx-0 mb-3">
               <Container fluid style={{ padding: 0 }}>
                 <Row>
-                  <Col style={{ padding: 5 }}>
+                  <Col style={{ padding: 5, }}>
                     <Select
                       placeholder="Users"
                       options={[
@@ -294,7 +294,7 @@ function Dashboard() {
                         { value: "employe", label: "Employee" },
                         { value: "customer", label: "Customer" },
                       ]}
-                      className="mx-2"
+                      className="mx-2 w-50"
                       onChange={(e) => setTableRole(e.value)}
                     />
                   </Col>
@@ -648,8 +648,8 @@ function Dashboard() {
                 tableRole === "customer"
                   ? employeeData.filter((x) => x.role == "customer")
                   : tableRole === "employe"
-                  ? employeeData.filter((x) => x.role == "employee")
-                  : employeeData
+                    ? employeeData.filter((x) => x.role == "employee")
+                    : employeeData
               }
               actions={[
                 (rowData) => ({
