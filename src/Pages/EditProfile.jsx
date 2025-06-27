@@ -186,6 +186,7 @@ const EditProfile = () => {
               phoneNumber: userData?.phone,
               password: userData?.password,
               confirmPassword: userData?.password,
+              address: userData?.address,
               role: userData?.role ? { label: userData?.role, value: userData?.role } : "",
               myImage: imagePreview ? imagePreview : null,
             }}
@@ -413,30 +414,58 @@ const EditProfile = () => {
                         </Col>
                       </Row>
                       <Row>
-                        <Form.Group className="mt-2 create-user-firstname">
-                          <Form.Label className="required">Role </Form.Label>{" "}
-                          <Select
-                            name="role"
-                            type="select"
-                            onBlur={handleBlur}
-                            isDisabled
-                            value={values.role}
-                            onChange={(e) => {
-                              setFieldValue("role", e);
-                            }}
-                            options={[
-                              {
-                                value: "employee",
-                                label: "employee",
-                              },
-                              {
-                                value: "customer",
-                                label: "customer",
-                              },
-                            ]}
-                          />
-                        </Form.Group>
-
+                        <Col xs={12} sm={12} md={12} lg={6} className="px-3">
+                          <Form.Group className="mt-2 create-user-firstname">
+                            <Form.Label className="required">Address </Form.Label>{" "}
+                            <InputGroup>
+                              <textarea
+                                className="addressField"
+                                placeholder="Enter Address"
+                                onPaste={(e) => {
+                                  e.preventDefault();
+                                  return false;
+                                }}
+                                onCopy={(e) => {
+                                  e.preventDefault();
+                                  return false;
+                                }}
+                                name="address"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                rows={3}
+                                value={values?.address}
+                                type={"text"}
+                              />
+                            </InputGroup>
+                          </Form.Group>
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={6} className="px-3">
+                          <Form.Group className="mt-2 create-user-firstname">
+                            <Form.Label className="required">Role </Form.Label>{" "}
+                            <Select
+                              name="role"
+                              type="select"
+                              onBlur={handleBlur}
+                              isDisabled
+                              value={values.role}
+                              onChange={(e) => {
+                                setFieldValue("role", e);
+                              }}
+                              options={[
+                                {
+                                  value: "employee",
+                                  label: "employee",
+                                },
+                                {
+                                  value: "customer",
+                                  label: "customer",
+                                },
+                              ]}
+                            />
+                          </Form.Group>
+                        </Col>
+                      </Row>
+                      <Row>
                         <Col className="mt-3 d-flex justify-content-end ">
                           <Button
                             variant="outline-secondary"

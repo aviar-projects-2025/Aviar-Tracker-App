@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Nav, Button, Modal } from "react-bootstrap";
+import { Container, Nav, Button, Modal, Col } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,6 +12,7 @@ import { toast } from "react-toastify";
 import Api from "../../Config/Api";
 import Loader from "../../core/Loader";
 import profile from "../../Components/ClientHeader/NoProfile.png";
+import { QRCodeCanvas } from "qrcode.react";
 function EmployeHeader() {
   const firstName = localStorage.getItem("firstName");
   const [imagePreview, setImagePreview] = useState();
@@ -20,7 +21,13 @@ function EmployeHeader() {
   const [logoutshow, setLogoutShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleClose = () => [setShow(false), setLogoutShow(false)];
+  const handleCloseQr = () => [setQrModal(false)];
   const lastName = localStorage.getItem("lastName");
+  const [empId, setEmpId] = useState('')
+  const [qrImage, setQrImage] = useState('')
+  const [qrModal, setQrModal] = useState(false)
+
+
   const navigate = useNavigate();
   const Capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -46,9 +53,17 @@ function EmployeHeader() {
         toast.error("logintime not updated");
       });
   };
+
+  const handleQrClick = () => {
+    // setQrImage()
+    setQrModal(true)
+  }
+
+
   const getEditData = () => {
     setIsLoading(true);
     const userId = localStorage.getItem("userId");
+    // setEmpId(userId)
     Api.get(`/user/${userId}`).then((res) => {
       setIsLoading(false);
       const data = res?.data?.data?.getOne;
@@ -60,6 +75,8 @@ function EmployeHeader() {
   };
   useEffect(() => {
     getEditData();
+    const userId = localStorage.getItem("userId");
+    setEmpId(userId)
   }, []);
   return (
     <Navbar bg="light" expand="lg">
@@ -79,7 +96,22 @@ function EmployeHeader() {
               Projects
             </Nav.Link>
           </Nav>
-          <Nav className="me-auto w-100 d-flex justify-content-end">
+          <Nav className="w-100 me-2 d-flex justify-content-end" style={{ marginTop: -10 }} onClick={() => { handleQrClick() }}>
+            <div style={{
+              width: 100,
+              height: 60,
+              position: 'relative'
+            }}>
+
+              <QRCodeCanvas
+                className="shadow-lg qrImageStyle"
+                value={`http://aviar-tracker.s3-website.ap-south-1.amazonaws.com/EmployeeId/${empId}`}
+              //   value={`http://localhost:3000/EmployeeId/${empId}`}
+              />
+
+            </div>
+          </Nav>
+          <Nav className="me-auto  d-flex justify-content-end border">
             <NavDropdown
               className="drop"
               align="end"
@@ -162,6 +194,27 @@ function EmployeHeader() {
             </div>
           </Modal>
         </div>
+      </Modal>
+      <Modal
+        show={qrModal}
+        centered
+        onHide={handleCloseQr}
+        // backdrop="static"
+        // keyboard={false}
+        // className="modal-background edit"
+      >
+        <div className="d-flex justify-content-center align-items-center"> 
+          <QRCodeCanvas
+            className="shadow-lg "
+            style={{
+              width:300,
+              height:300,
+            }}
+            value={`http://aviar-tracker.s3-website.ap-south-1.amazonaws.com/EmployeeId/${empId}`}
+
+          />
+        </div>
+
       </Modal>
     </Navbar>
   );
