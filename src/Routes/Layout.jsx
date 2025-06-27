@@ -9,21 +9,27 @@ function LayoutWithSidebar() {
 
   return (
     <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
+        display: 'flex',
       minHeight: '100vh',
-      paddingLeft: isSidebarOpen ? '250px' : '80px',
-      paddingTop: '65px',
-      transition: 'padding-left 0.3s ease'
+      backgroundColor: '#f8f9fa'
+      // paddingLeft: isSidebarOpen ? '250px' : '80px',
+      // paddingTop: '60px',
+      // transition: 'padding-left 0.3s ease'
     }}>
       {/* <Header /> */}
       <Home isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <div style={{ 
-        flexGrow: 1,
-        padding: '20px',
-        backgroundColor: '#f8f9fa'
+         flexGrow: 1,
+        marginLeft: isSidebarOpen ? '250px' : '80px',
+        transition: 'margin-left 0.3s ease',
+        paddingTop: '60px', // Space for header
+        position: 'relative',
+    
       }}>
-        <Outlet />
+       {/* <Header /> */}
+        <div style={{ padding: '20px' }}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );
