@@ -1,0 +1,29 @@
+.navbar {
+  background-color: blue;
+  padding: 10px;
+}
+
+
+.nav-link:hover {
+  background-color: #f1f1f1;
+  /* border-left: 4px solid #adb5bd; */
+}
+.homesidebar {
+  /* background-color: #f8f9fa; */
+  box-sizing: border-box;
+  /* background-color:; */
+  box-shadow: #f1f1f1 0px 0px 10px;
+  padding: 10px;
+padding-right: 5px;
+  /* height: 100%; */
+  width: 100%;
+}
+.menusidebar {
+  /* background-color: #f8f9fa; */
+  background-color: green;
+  box-sizing: border-box;
+  /* background-color:; */
+  box-shadow: #f1f1f1 0px 0px 10px;
+  padding: 10px;
+}
+

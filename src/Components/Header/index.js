@@ -6,6 +6,10 @@ import Aviar from "./aviar.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Avatar from "react-avatar";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
+
 
 function Header() {
   const firstName = localStorage.getItem("firstName");
@@ -25,7 +29,7 @@ function Header() {
   };
 
   return (
-    <Navbar bg="light" expand="lg" className="mx-auto">
+    <Navbar bg="light" expand="lg" className="mx-auto"style={{ position: "fixed", top: 0, width: "100%", zIndex: 1000 }}>
       <Container fluid className="mx-4">
         <Link to={"/admin/dashboard"}>
           <img alt="" src={Aviar} width="200" height="65" className="d-inline-block align-top" />
@@ -36,18 +40,24 @@ function Header() {
             <div className="navbarAdmin" style={{
 
             }}>
-              <Link to={"/admin/dashboard"} className="nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
-                Users
+              <Link  className="nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+              {/* to={"admin/home"} */}
+  <FontAwesomeIcon icon={faHouse} size="5" style={{    fontSize: "30px"  }} />
+                
               </Link>
-              <Link to={"/project/list"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
-                Projects
-              </Link>
-              <Link to={"/project/defects"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
-                Defects
-              </Link>
-              <Link to={"/project/statuses"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
-                Project Status
-              </Link>
+               <Link to={"/admin/dashboard"} className="nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+                                  Users
+                                </Link>
+                                <Link to={"/project/list"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+                                  Projects
+                                </Link>
+                                <Link to={"/project/defects"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+                                  Defects
+                                </Link>
+                                <Link to={"/project/statuses"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+                                  Project Status
+                                </Link>
+         
             </div>
           ) : (
             ""

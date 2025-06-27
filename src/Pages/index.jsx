@@ -34,6 +34,8 @@ const ProjectStatuses = lazy(() => import("./ProjectStatuses"));
 const ProjectStatus = lazy(() => import("./ProjectStatus"));
 const EmployeeId = lazy(() => import("./EmployeeId"));
 const WebcamCapture = lazy(() => import("./webcam"));
+const Home = lazy(() => import("./Home"));
+const LayoutWithSidebar = lazy(() => import("../Routes/Layout"));
 
 export {
   Login,
@@ -70,4 +72,6 @@ export {
   ProjectStatus,
   EmployeeId,
   WebcamCapture,
+  Home,
+  LayoutWithSidebar,
 };

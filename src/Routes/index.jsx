@@ -36,6 +36,8 @@ import {
   ProjectStatus,
   EmployeeId,
   WebcamCapture,
+  // Home,
+  LayoutWithSidebar,
 } from "../Pages";
 // import PasswordLayout from "../Pages/changePassword/Passwordlayout";
 
@@ -50,7 +52,7 @@ export default function Routers() {
   return (
     <Router>
       <Suspense fallback={fallbackLoader}>
-        <ToastContainer
+        <ToastContainer 
           position="top-right"
           autoClose={2000}
           hideProgressBar={false}
@@ -63,58 +65,63 @@ export default function Routers() {
           theme="light"
         />
         <Routes>
-          {/* <PublicLayout exact name="LandingPage" path="/kharpi" component={LandingPage} />
-          <Route exact path="/" component={Home}>
-            <Redirect to="/kharpi" />
-          </Route>{" "} */}
           <Route path="/" element={<Navigate to="/login" replace />} />
 
-          {/* <Route path="/" ><redirect ></redirect> </Route> */}
-          <Route path="" exact element={<Admin />}>
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />
-            <Route path="/admin-email" element={<ProjectEmail />} />
-            <Route path="/admin/projects" element={<Projects />} />
-            <Route path="/project/list" element={<Project />} />
-            <Route path="/project/users/:name/:id" element={<ProjectUsers />} />
-            <Route path="/products" element={<Product />} />
-            <Route path="/project/defects" element={<Defects />} />
-            <Route path="/defect/:name/:id" element={<DefectDatas />} />
-            <Route path="/edit/screen" element={<EditScreen />} />
-            <Route path="/employee/Leave" element={<LeaveManagement />} />
-            <Route path="/project/defect" element={<List />} />
-            <Route path="/defect/detail/:id" element={<DefectDetails />} />
-            <Route path="/project/statuses" element={<ProjectStatuses />} />
-            <Route path="/project/status" element={<ProjectStatus />} />
-            <Route path="/employee/attendance/admin" element={<AdminEmployeAttendance />} />
+          {/* Admin routes */}
+          <Route element={<Admin />}>
+            <Route element={<LayoutWithSidebar />}>
+              {/* All these routes will have sidebar */}
+              <Route path="admin/dashboard" element={<AdminDashboard />} />
+              <Route path="admin/projects" element={<Projects />} />
+              <Route path="project/list" element={<Project />} />
+              <Route path="project/users/:name/:id" element={<ProjectUsers />} />
+              <Route path="products" element={<Product />} />
+              <Route path="project/defects" element={<Defects />} />
+              <Route path="defect/:name/:id" element={<DefectDatas />} />
+              <Route path="employee/Leave" element={<LeaveManagement />} />
+              <Route path="project/defect" element={<List />} />
+              <Route path="defect/detail/:id" element={<DefectDetails />} />
+              <Route path="project/statuses" element={<ProjectStatuses />} />
+              <Route path="project/status" element={<ProjectStatus />} />
+              {/* <Route path="admin/home" element={<Home />} /> */}
+            </Route>
+            
+            {/* These admin routes won't have sidebar */}
+            <Route path="admin-email" element={<ProjectEmail />} />
+            <Route path="employee/attendance/admin" element={<AdminEmployeAttendance />} />
           </Route>
 
-          <Route path="" exact element={<Client />}>
-            <Route path="/project/defects/list" element={<List />} />
-            <Route path="/defect/details/:id" element={<DefectDetails />} />
-            <Route path="/defects-portal" element={<Defectsportal />} />
-            <Route path="/edit" element={<EditScreen />} />
-            <Route path="/edit/:name/:id" element={<DefectDatas />} />
+          {/* Client routes */}
+          <Route element={<Client />}>
+            <Route path="project/defects/list" element={<List />} />
+            <Route path="defect/details/:id" element={<DefectDetails />} />
+            <Route path="defects-portal" element={<Defectsportal />} />
+            <Route path="edit" element={<EditScreen />} />
+            <Route path="edit/:name/:id" element={<DefectDatas />} />
           </Route>
 
-          <Route exact element={<EmployeeLayout />}>
-            <Route path="/employee/dashboard" element={<EmployeeDashboard />} />
-            <Route path="/edit/profile" element={<EditScreen />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/defect" element={<List />} />
-            <Route path="/details/:id" element={<DefectDetails />} />
-            <Route path="/:name/:id" element={<DefectDatas />} />
-          </Route>
-          <Route exact element={<PasswordLayout />}>
-            <Route exact path="/login" element={<Login />} />
-            <Route path="/forgot/password" element={<ForgetPassword />} />
-            <Route path="/change/password" element={<ChangePassword />} />
+          {/* Employee routes */}
+          <Route element={<EmployeeLayout />}>
+            <Route path="employee/dashboard" element={<EmployeeDashboard />} />
+            <Route path="edit/profile" element={<EditScreen />} />
+            <Route path="project" element={<Project />} />
+            <Route path="defect" element={<List />} />
+            <Route path="details/:id" element={<DefectDetails />} />
+            <Route path=":name/:id" element={<DefectDatas />} />
           </Route>
 
-          <Route path="/profile/view" element={<ProfilePage />} />
-          <Route path="/admin/to/employe/edit" element={<AdminEmployeEdit />} />
-          <Route path="/project" element={<ProjectDefectList />} />
-          <Route path="/EmployeeId/:id" element={<EmployeeId />} />
-          <Route path="/webcam" element={<WebcamCapture />} />
+          {/* Auth routes */}
+          <Route element={<PasswordLayout />}>
+            <Route path="login" element={<Login />} />
+            <Route path="forgot/password" element={<ForgetPassword />} />
+            <Route path="change/password" element={<ChangePassword />} />
+          </Route>
+          {/* Miscellaneous routes */}
+          <Route path="profile/view" element={<ProfilePage />} />
+          <Route path="admin/to/employe/edit" element={<AdminEmployeEdit />} />
+          <Route path="project" element={<ProjectDefectList />} />
+          <Route path="EmployeeId/:id" element={<EmployeeId />} />
+          <Route path="webcam" element={<WebcamCapture />} />
         </Routes>
       </Suspense>
     </Router>
