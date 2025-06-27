@@ -7,12 +7,12 @@
   align-items: center;
 }
 
-.nav-link{
+.nav-link {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.logoutModal{
+.logoutModal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,18 +23,18 @@
   background: #c0c0c05a;
 }
 
-.boxhover{
+.boxhover {
   /* border: 1px solid black; */
   border-right: 1px solid gray;
-  
+  height: 250px !important;
 }
 
-.boxhover:hover{
+.boxhover:hover {
   border: 1px solid rgb(0, 157, 16);
 }
 
-.bottomCont{
-  margin-top:20px;
+.bottomCont {
+  margin-top: 20px;
   height: 71.5px;
   border-radius: 8px;
   width: 299px;
@@ -43,14 +43,88 @@
 }
 
 
-.boxAlignment{
-  display: flex; 
+.boxAlignment {
+  display: flex;
   padding: 10px;
   border: 1px solid black;
 }
 
-.showBottom{
-  border: 1px solid black;
+.showBottom {
   background: #e4e4e4;
   height: 70px;
+  /* transform: translateY(-1%); */
+  /* transition: transform 0.3s ease-in-out; */
+}
+
+/* .hideBottom{
+  transform: translateY(100%);
+} */
+
+
+.cardContainer {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.bottomSlide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e4e4e4;
+  height: 70px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.bottomSlide.show {
+  transform: translateY(0);
+}
+
+.boxhover {
+  border-right: 1px solid gray;
+  transition: border 0.2s ease;
+}
+
+.boxhover:hover {
+  border: 1px solid rgb(0, 157, 16);
+}
+
+.dropDownStyle {
+  border-radius: 7px;
+  height: 30px;
+  width: 100px;
+
+}
+
+
+
+.rightBar {
+  position: fixed;
+  right: 0;
+  top: 0px;
+  width: 50px;
+  height: calc(100vh);
+  background-color: #f8f9fa;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-left: 1px solid #ddd; */
+}
+
+.roundButton1{
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #4f78ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
 }
