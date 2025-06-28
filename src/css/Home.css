@@ -3,16 +3,16 @@
   padding: 10px;
 }
 
-
-.nav-link:hover {
-  background-color: #f1f1f1;
-  /* border-left: 4px solid #adb5bd; */
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .homesidebar {
   /* background-color: #f8f9fa; */
   box-sizing: border-box;
   /* background-color:; */
-  box-shadow: #f1f1f1 0px 0px 10px;
+  box-shadow: #f1f1f1 0px 0px 100px;
   padding: 10px;
 padding-right: 5px;
   /* height: 100%; */
@@ -23,7 +23,8 @@ padding-right: 5px;
   background-color: green;
   box-sizing: border-box;
   /* background-color:; */
-  box-shadow: #f1f1f1 0px 0px 10px;
+  box-shadow: #f1f1f1 0px 0px 100px;
+
   padding: 10px;
 }
 

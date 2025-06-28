@@ -45,18 +45,18 @@ function Header() {
   <FontAwesomeIcon icon={faHouse} size="5" style={{    fontSize: "30px"  }} />
                 
               </Link>
-               <Link to={"/admin/dashboard"} className="nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+               {/* <Link to={"/admin/dashboard"} className="nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                                   Users
                                 </Link>
                                 <Link to={"/project/list"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                                   Projects
-                                </Link>
-                                <Link to={"/project/defects"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
+                                </Link> */}
+                                {/* <Link to={"/project/defects"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                                   Defects
                                 </Link>
                                 <Link to={"/project/statuses"} className=" nav-link text-body text-decoration-none adminalignRight menu-text nav-font-color">
                                   Project Status
-                                </Link>
+                                </Link> */}
          
             </div>
           ) : (
