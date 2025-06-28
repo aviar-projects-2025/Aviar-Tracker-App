@@ -1,0 +1,30 @@
+.navbar {
+  background-color: blue;
+  padding: 10px;
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.homesidebar {
+  /* background-color: #f8f9fa; */
+  box-sizing: border-box;
+  /* background-color:; */
+  box-shadow: #f1f1f1 0px 0px 100px;
+  padding: 10px;
+padding-right: 5px;
+  /* height: 100%; */
+  width: 100%;
+}
+.menusidebar {
+  /* background-color: #f8f9fa; */
+  background-color: green;
+  box-sizing: border-box;
+  /* background-color:; */
+  box-shadow: #f1f1f1 0px 0px 100px;
+
+  padding: 10px;
+}
+

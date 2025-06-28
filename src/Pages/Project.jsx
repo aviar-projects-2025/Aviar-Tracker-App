@@ -210,7 +210,7 @@ function Project() {
         <Loader />
       ) : (
 
-        <div className="d-flex justify-content-between align-items-center border">
+        <div className="d-flex justify-content-between align-items-center border"style={{ width: '100%',marginTop: '10px', padding: '20px 0', position: 'relative', }}>
           <div className="" style={{ width: '95%' }}>
             <div className=" px-5 mt-3 d-flex justify-content-between align-items-center">
               <h3>Projects</h3>
@@ -673,6 +673,7 @@ function Project() {
                 }}
                 className="roundButton1"
                 title="Create Project"
+            
               >
                 +
               </button>
