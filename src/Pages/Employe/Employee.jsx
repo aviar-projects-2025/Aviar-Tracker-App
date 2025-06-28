@@ -268,15 +268,15 @@ function EmployeeDashbord() {
         <Loader />
       ) : (
         <>
-          <Row className="mt-4">
-            <Col className="ms-5">
+          <Row className="">
+            {/* <Col className="ms-5">
               <QRCodeCanvas
                 className="shadow-lg p-3 m"
                 value={`http://aviar-tracker.s3-website.ap-south-1.amazonaws.com/EmployeeId/${empId}`}
                 //   value={`http://localhost:3000/EmployeeId/${empId}`}
               />
-            </Col>
-            <Col className="d-flex justify-content-end me-5 h-100 align-items-center">
+            </Col> */}
+            <Col className="mt-5 d-flex justify-content-end me-5 h-100 align-items-center">
               <Button
                 className=" summary-ellisis  custom-btn-hover"
                 onClick={() => {
@@ -287,9 +287,9 @@ function EmployeeDashbord() {
               </Button>
             </Col>
           </Row>
-          <div className="mt-5 mx-4 w-auto">
-            <div className="mt-5 mx-4 w-auto">
-              <h4 className="mt-4 p-0 w-auto">Employee Dashboard</h4>
+          <div className=" mx-4 w-auto">
+            <div className=" mx-4 w-auto">
+              <h4 className="p-0 pb-3 w-auto">Employee Dashboard</h4>
               <div className="">
                 <MaterialTable
                   title="Tickets"

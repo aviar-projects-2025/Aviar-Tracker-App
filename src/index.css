@@ -128,3 +128,23 @@
   color: white;
   font-size: 20px;
 }
+
+.addressField{
+  border-radius: 7px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(224, 224, 224);
+  outline: none;
+}
+
+.addressField:focus {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 1); /* blue-ish glow */
+  border-color: rgb(0, 123, 255); /* Optional: change border color */
+}
+
+.qrImageStyle{
+  width: 70px !important;
+  height: 70px !important;
+  position: absolute;
+}
